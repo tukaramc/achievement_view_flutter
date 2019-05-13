@@ -27,6 +27,7 @@ class AchievementWidget extends StatefulWidget {
   final TextStyle textStyleSubTitle;
   final String title;
   final String subTitle;
+  final String operation;
 
   const AchievementWidget(
       {Key key,
@@ -45,7 +46,8 @@ class AchievementWidget extends StatefulWidget {
       this.textStyleTitle,
       this.textStyleSubTitle,
       this.title = "",
-      this.subTitle = ""})
+      this.subTitle = "", 
+      this.operation})
       : super(key: key);
 
   @override
@@ -173,7 +175,7 @@ class AchievementWidgetState extends State<AchievementWidget>
       width: HEIGHT_CARD,
       height: HEIGHT_CARD,
       decoration: BoxDecoration(
-          color: Colors.white.withOpacity(0.2),
+          color: widget.color,
           borderRadius: _buildBorderIcon()),
       child: widget.icon,
     );
@@ -214,7 +216,7 @@ class AchievementWidgetState extends State<AchievementWidget>
       child: Text(
         widget.title,
         softWrap: true,
-        style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)
+        style: TextStyle(color: widget.operation=='warning'?Colors.black:Colors.white, fontWeight: FontWeight.bold)
             .merge(widget.textStyleTitle),
       ),
     );
@@ -235,7 +237,7 @@ class AchievementWidgetState extends State<AchievementWidget>
         child: Text(
           widget.subTitle,
           maxLines: 1,
-          style: TextStyle(color: Colors.white).merge(widget.textStyleSubTitle),
+          style: TextStyle(color: widget.operation=='warning'?Colors.black:Colors.white).merge(widget.textStyleSubTitle),
         ));
   }
 

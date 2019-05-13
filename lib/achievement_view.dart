@@ -16,6 +16,7 @@ class AchievementView {
   final TextStyle textStyleSubTitle;
   final String title;
   final String subTitle;
+  final String operation;
 
   OverlayEntry _overlayEntry;
 
@@ -37,6 +38,7 @@ class AchievementView {
     this.duration = const Duration(seconds: 3),
     this.title = "My Title",
     this.subTitle = "My subtitle with max 1 line",
+    this.operation,
   });
 
   OverlayEntry _buildOverlay() {
@@ -54,6 +56,7 @@ class AchievementView {
           typeAnimationContent: typeAnimationContent,
           borderRadius: borderRadius,
           color: color,
+          operation: operation,
           finish: () {
             _hide();
           },
