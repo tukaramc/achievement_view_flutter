@@ -260,9 +260,9 @@ class AchievementWidgetState extends State<AchievementWidget>
 
   EdgeInsets _buildPaddingContent() {
     if (widget.isCircle) {
-      return EdgeInsets.only(left: 15.0, right: 25.0);
+      return EdgeInsets.only(left: 1.0, right: 25.0);
     }
-    return EdgeInsets.only(left: 15.0, right: 15.0);
+    return EdgeInsets.only(left: 1.0, right: 15.0);
   }
 
   Animation<Offset> _buildAnimatedContent(AnimationController controller) {
