@@ -192,7 +192,7 @@ class AchievementWidgetState extends State<AchievementWidget>
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              _buildTitle(),
+//               _buildTitle(),
               _buildSubTitle(),
             ],
           ),
