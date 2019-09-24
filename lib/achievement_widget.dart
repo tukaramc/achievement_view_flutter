@@ -32,7 +32,7 @@ class AchievementWidget extends StatefulWidget {
   const AchievementWidget(
       {Key key,
       this.finish,
-      this.duration = const Duration(seconds: 3),
+      this.duration = const Duration(seconds: 1),
       this.listener,
       this.isCircle = false,
       this.icon = const Icon(
