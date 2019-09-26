@@ -36,8 +36,8 @@ class AchievementView {
     this.textStyleSubTitle,
     this.alignment = Alignment.topCenter,
     this.duration = const Duration(seconds: 1),
-    this.title = "My Title",
-    this.subTitle = "My subtitle with max 1 line",
+    this.title = "",
+    this.subTitle = "",
     this.operation,
   });
 
